@@ -16,16 +16,16 @@ export default function CvPage() {
   const data = getPortfolioData();
 
   return (
-    <main className="bg-[#eef1ee] px-4 py-8 text-[#1d2424]">
+    <main className="print-root bg-[#0F172A] px-4 py-8 text-[#F8FAFC]">
       <div className="no-print mx-auto mb-4 flex max-w-4xl justify-end">
         <PrintButton />
       </div>
-      <article className="print-page mx-auto max-w-4xl rounded-md bg-white p-8 shadow-sm">
-        <header className="border-b border-[#d8ded9] pb-6">
+      <article className="print-page mx-auto max-w-4xl rounded-md border border-[#334155] bg-[#1E293B] p-8 shadow-sm">
+        <header className="border-b border-[#334155] pb-6">
           <h1 className="text-4xl font-semibold">{data.profile.full_name}</h1>
-          <p className="mt-2 text-xl text-[#0f766e]">{data.profile.headline}</p>
-          <p className="mt-4 leading-7 text-[#4b5b5b]">{data.profile.summary}</p>
-          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+          <p className="mt-2 text-xl text-[#38BDF8]">{data.profile.headline}</p>
+          <p className="mt-4 leading-7 text-[#CBD5E1]">{data.profile.summary}</p>
+          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[#CBD5E1]">
             <span>{data.profile.email}</span>
             {data.profile.phone ? <span>{data.profile.phone}</span> : null}
             {data.profile.location ? <span>{data.profile.location}</span> : null}
@@ -40,9 +40,9 @@ export default function CvPage() {
                 <div className="flex justify-between gap-4">
                   <div>
                     <h3 className="font-semibold">{experience.role}</h3>
-                    <p className="text-sm text-[#0f766e]">{experience.company}</p>
+                    <p className="text-sm text-[#38BDF8]">{experience.company}</p>
                   </div>
-                  <p className="text-sm text-[#637070]">
+                  <p className="text-sm text-[#CBD5E1]">
                     {formatDate(experience.start_date)} -{" "}
                     {experience.is_current
                       ? "Actualidad"
@@ -69,7 +69,7 @@ export default function CvPage() {
               <div key={project.name}>
                 <h3 className="font-semibold">{project.name}</h3>
                 <p className="mt-1 text-sm leading-6">{project.description}</p>
-                <p className="mt-1 text-sm text-[#637070]">
+                <p className="mt-1 text-sm text-[#CBD5E1]">
                   {project.technologies.join(" - ")}
                 </p>
               </div>
@@ -86,7 +86,7 @@ export default function CvPage() {
 
         <section className="mt-7 grid gap-6 sm:grid-cols-2">
           <div>
-            <h2 className="text-lg font-semibold">Educacion</h2>
+            <h2 className="text-lg font-semibold">Educación</h2>
             <div className="mt-3 space-y-3 text-sm">
               {data.education.map((item) => (
                 <p key={`${item.institution}-${item.degree}`}>

@@ -9,6 +9,10 @@ test("home shows the public CV sections", async ({ page }) => {
   await expect(page.getByText(/SQL Server/i).first()).toBeVisible();
   await expect(page.getByRole("heading", { name: /Casos destacados/i })).toBeVisible();
   await expect(page.getByRole("link", { name: /Ver CV imprimible/i })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Contactar/i })).toHaveAttribute(
+    "href",
+    "https://wa.me/51933703902",
+  );
 });
 
 test("printable CV works", async ({ page }) => {
