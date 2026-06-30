@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manuel Vargas | Data Analyst, Data Engineer y BI",
+  title: "Manuel | Data Analyst, Data Engineer y BI",
   description:
-    "CV y portafolio profesional orientado a analisis de datos, SQL Server, Python, Power BI, ETL, Azure y Business Intelligence.",
+    "CV y portafolio profesional orientado a analisis de datos, SQL Server, Python, Power BI, ETL y Azure.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,6 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
